@@ -160,7 +160,7 @@ public class AliyunPushMessageReceiver extends MessageReceiver {
         sendEvent("aliyunPushReceived", params);
     }
 
-    private void sendEvent(String eventName, @Nullable WritableMap params) {
+    public static  void sendEvent(String eventName, @Nullable WritableMap params) {
         if (context == null) {
             params.putString("appState", "background");
             initialMessage = params;

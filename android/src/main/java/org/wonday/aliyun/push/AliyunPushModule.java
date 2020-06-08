@@ -281,5 +281,7 @@ public class AliyunPushModule extends ReactContextBaseJavaModule implements Life
     @ReactMethod
     public void getInitialMessage(final Promise promise){
         promise.resolve(AliyunPushMessageReceiver.initialMessage);
+        //获取到消息后置为空
+        AliyunPushMessageReceiver.initialMessage=null;
     }
 }
